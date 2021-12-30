@@ -3,8 +3,8 @@ import styles from './ItemDescription.module.css';
 
 const ItemDescription = ({ description, price }) => {
 	return (
-		<div>
-			<p className={styles.desc}>
+		<div className={styles.desc}>
+			<p>
 				<strong>{description}</strong>
 			</p>
 			<p>
