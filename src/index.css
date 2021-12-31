@@ -1,6 +1,9 @@
 * {
 	margin: 0;
 	--error-color: maroon;
+	--primary-color: #858080;
+	--no-color: white;
+	--secondary-color: #1876d1;
 }
 body {
 	margin: 0;
