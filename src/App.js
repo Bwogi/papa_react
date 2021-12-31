@@ -1,28 +1,14 @@
-import React, { useEffect, useState } from 'react';
 import Joke from './Components/Joke';
 import styles from './App.module.css';
+import RandomJoke from './Hooks/RandomJokes';
 
 const App = () => {
-	const [joke, setJoke] = useState('');
-	const [id, setID] = useState('');
-
-	useEffect(() => {
-		const fetchJoke = async () =>
-			await fetch(
-				`http://api.icndb.com/jokes/random?firstName=Andrew&lastName=Bwogi`
-			)
-				.then((res) => res.json())
-				.then((data) => {
-					setJoke(data.value.joke);
-					setID(data.value.id);
-				});
-		fetchJoke();
-	}, []); // this happens on the component mount
+	const joke = RandomJoke('Damalie', 'Katiiti');
 
 	return (
 		<center className={styles.main}>
 			<h1 className={styles.title}>The Joke Generator</h1>
-			<Joke joke={joke} id={id} />
+			<Joke joke={joke} />
 			<button className={styles.btn}>Generate Joke</button>
 		</center>
 	);
