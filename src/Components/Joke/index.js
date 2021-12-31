@@ -1,9 +1,9 @@
 import styles from './Joke.module.css';
 
-const Joke = () => {
+const Joke = ({ joke }) => {
 	return (
 		<div>
-			<p className={styles.joke}>the joke</p>
+			<p className={styles.joke}>{joke}</p>
 		</div>
 	);
 };
