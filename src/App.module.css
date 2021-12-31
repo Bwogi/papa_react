@@ -1,3 +1,21 @@
 .error {
 	color: var(--error-color);
 }
+
+.title {
+	color: var(--primary-color);
+}
+
+.btn {
+	padding: 10px;
+	color: var(--no-color);
+	background: var(--secondary-color);
+	border-color: var(--secondary-color);
+	border-radius: 10px;
+}
+.main {
+	padding: 30px;
+	margin: 20px;
+	border: 1px solid var(--secondary-color);
+	border-radius: 10px;
+}
