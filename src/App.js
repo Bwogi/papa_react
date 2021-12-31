@@ -3,8 +3,20 @@ import Joke from './Components/Joke';
 import styles from './App.module.css';
 
 const App = () => {
+	// useEffect(() => {
+	// 	const fetchJoke = async () =>
+	// 		await fetch(
+	// 			`http://api.icndb.com/jokes/random?firstName=Andrew&lastName=Bwogi`
+	// 		)
+	// 			.then((res) => res.json())
+	// 			.then((data) => {
+	// 				console.log(data);
+	// 			});
+	// 	fetchJoke();
+	// }, []);
+
 	useEffect(() => {
-		const fetchJoke = async () =>
+		const theJokes = async () =>
 			await fetch(
 				`http://api.icndb.com/jokes/random?firstName=Andrew&lastName=Bwogi`
 			)
@@ -12,7 +24,7 @@ const App = () => {
 				.then((data) => {
 					console.log(data);
 				});
-		fetchJoke();
+		theJokes();
 	}, []);
 
 	return (
